@@ -30,10 +30,16 @@ from openenv.core.env_server.types import State
 
 try:
     from ..models import AuditAction, AuditObservation, AuditState, UserProfile
-    from .graders import grade_step
+    from .graders import grade_step, grade_task1, grade_task2, grade_task3
 except ImportError:
     from models import AuditAction, AuditObservation, AuditState, UserProfile
-    from server.graders import grade_step
+    from server.graders import grade_step, grade_task1, grade_task2, grade_task3
+
+EPISODE_GRADERS = {
+    1: grade_task1,
+    2: grade_task2,
+    3: grade_task3,
+}
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
@@ -205,6 +211,15 @@ class FoodLabelAuditorEnvironment(Environment):
         is_done = self._current_idx >= len(self._episode_queue)
 
         if is_done:
+            episode_grader = EPISODE_GRADERS.get(self._state.task_id)
+            episode_score = 0.0
+            if episode_grader is not None:
+                episode_score = episode_grader(
+                    self._actions_history,
+                    self._gt_history,
+                    self._products_by_id,
+                )
+
             return AuditObservation(
                 product_id=product_id,
                 product_name="Episode complete",
@@ -217,6 +232,9 @@ class FoodLabelAuditorEnvironment(Environment):
                 reward=reward,
                 metadata={
                     "cumulative_score": self._state.cumulative_score,
+                    "episode_score": episode_score,
+                    "task_id": self._state.task_id,
+                    "grader": f"grade_task{self._state.task_id}",
                     "steps_completed": self._state.step_count,
                 },
             )

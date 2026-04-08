@@ -15,6 +15,7 @@ Endpoints:
     - POST /step: Execute an action
     - GET /state: Get current environment state
     - GET /schema: Get action/observation schemas
+    - GET /tasks: List available tasks with grader info
     - WS /ws: WebSocket endpoint for persistent sessions
 
 Usage:
@@ -47,6 +48,55 @@ app = create_app(
     env_name="food_label_auditor",
     max_concurrent_envs=4,
 )
+
+
+TASK_DEFINITIONS = [
+    {
+        "id": "food_audit_task1",
+        "name": "Single Product Audit",
+        "difficulty": "easy",
+        "description": (
+            "Audit 1 high-risk product (NOVA-4, Nutri-Score D/E) for 1 health profile. "
+            "Tests basic food safety understanding and risk classification."
+        ),
+        "max_steps": 1,
+        "grader": "grade_task1",
+        "score_range": [0.0, 1.0],
+        "reset_params": {"task_id": 1},
+    },
+    {
+        "id": "food_audit_task2",
+        "name": "Multi-Product Multi-Profile Audit",
+        "difficulty": "medium",
+        "description": (
+            "Audit 10 products across 2 health profiles. Agent must give different "
+            "risk levels for the same product depending on user health conditions."
+        ),
+        "max_steps": 10,
+        "grader": "grade_task2",
+        "score_range": [0.0, 1.0],
+        "reset_params": {"task_id": 2},
+    },
+    {
+        "id": "food_audit_task3",
+        "name": "Adversarial Label Auditing",
+        "difficulty": "hard",
+        "description": (
+            "Audit 30 products including adversarial cases where marketing claims "
+            "contradict actual ingredients. Requires FSSAI-specific regulatory reasoning."
+        ),
+        "max_steps": 30,
+        "grader": "grade_task3",
+        "score_range": [0.0, 1.0],
+        "reset_params": {"task_id": 3},
+    },
+]
+
+
+@app.get("/tasks", tags=["Tasks"])
+async def list_tasks():
+    """List all available tasks with their grader information."""
+    return {"tasks": TASK_DEFINITIONS}
 
 
 def main(host: str = "0.0.0.0", port: int = 8000):
