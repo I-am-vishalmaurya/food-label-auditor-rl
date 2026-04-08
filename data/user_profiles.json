@@ -1,0 +1,50 @@
+[
+  {
+    "profile_id": "diabetic_adult",
+    "age": 45,
+    "conditions": ["diabetes"],
+    "dietary_restrictions": ["low_sugar"],
+    "thresholds": {
+      "sugars_g_max": 5.0,
+      "sodium_mg_max": 600,
+      "fat_g_max": 20.0,
+      "energy_kcal_max": 250
+    }
+  },
+  {
+    "profile_id": "healthy_child",
+    "age": 8,
+    "conditions": [],
+    "dietary_restrictions": [],
+    "thresholds": {
+      "sugars_g_max": 10.0,
+      "sodium_mg_max": 400,
+      "fat_g_max": 15.0,
+      "energy_kcal_max": 200
+    }
+  },
+  {
+    "profile_id": "hypertensive_senior",
+    "age": 65,
+    "conditions": ["hypertension"],
+    "dietary_restrictions": ["low_sodium"],
+    "thresholds": {
+      "sugars_g_max": 15.0,
+      "sodium_mg_max": 300,
+      "fat_g_max": 18.0,
+      "energy_kcal_max": 220
+    }
+  },
+  {
+    "profile_id": "healthy_adult",
+    "age": 30,
+    "conditions": [],
+    "dietary_restrictions": [],
+    "thresholds": {
+      "sugars_g_max": 25.0,
+      "sodium_mg_max": 2000,
+      "fat_g_max": 35.0,
+      "energy_kcal_max": 500
+    }
+  }
+]

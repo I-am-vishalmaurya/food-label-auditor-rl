@@ -1,0 +1,36 @@
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# All rights reserved.
+#
+# This source code is licensed under the BSD-style license found in the
+# LICENSE file in the root directory of this source tree.
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-food_label_auditor"
+version = "0.1.0"
+description = "Food Label Auditor environment for OpenEnv — audits Indian food labels against FSSAI/ICMR standards"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core[core]>=0.2.1",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+server = "food_label_auditor.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["food_label_auditor", "food_label_auditor.server"]
+package-dir = { "food_label_auditor" = ".", "food_label_auditor.server" = "server" }
+
+[tool.setuptools.package-data]
+food_label_auditor = ["data/*.json"]

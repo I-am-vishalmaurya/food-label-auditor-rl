@@ -1,0 +1,116 @@
+spec_version: 1
+name: food_label_auditor
+version: 0.1.0
+description: >
+  RL environment for auditing Indian food product labels against FSSAI 2020
+  regulations and ICMR-NIN dietary guidelines. The agent reads raw ingredient
+  labels and must classify risk, flag violations, and suggest safer alternatives
+  for different health profiles. Includes 3 difficulty-tiered tasks with
+  deterministic graders and adversarial cases.
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+
+client:
+  class_name: FoodLabelAuditorEnv
+  module: food_label_auditor.client
+
+action:
+  class_name: AuditAction
+  module: food_label_auditor.models
+
+observation:
+  class_name: AuditObservation
+  module: food_label_auditor.models
+
+default_image: food-label-auditor:latest
+
+tags:
+  - openenv
+  - health
+  - food-safety
+  - india
+  - fssai
+  - rl-environment
+
+metadata:
+  domain: health
+  geography: india
+  regulatory_standard: FSSAI-2020
+  research_applications:
+    - LLM safety alignment
+    - personalized health AI evaluation
+    - Global South AI benchmarking
+
+api:
+  base_url: /
+  endpoints:
+    reset:
+      method: POST
+      path: /reset
+      request_model: ResetRequest
+      response_model: ResetResponse
+    step:
+      method: POST
+      path: /step
+      request_model: AuditAction
+      response_model: StepResponse
+    state:
+      method: GET
+      path: /state
+      response_model: AuditState
+    tasks:
+      method: GET
+      path: /tasks
+      response_model: TaskListResponse
+
+tasks:
+  - id: food_audit_task1
+    name: Single Product Audit
+    difficulty: easy
+    description: >
+      Audit 1 high-risk product (NOVA-4, Nutri-Score D/E) for 1 health profile.
+      Tests basic food safety understanding and risk classification.
+    max_steps: 1
+    grader: grade_task1
+    success_criteria:
+      min_risk_accuracy: 0.4
+      ingredient_flag_required: true
+
+  - id: food_audit_task2
+    name: Multi-Product Multi-Profile Audit
+    difficulty: medium
+    description: >
+      Audit 10 products across 2 health profiles. Agent must give different
+      risk levels for the same product depending on user health conditions.
+    max_steps: 10
+    grader: grade_task2
+    success_criteria:
+      min_risk_accuracy: 0.5
+      profile_differentiation_required: true
+
+  - id: food_audit_task3
+    name: Adversarial Label Auditing
+    difficulty: hard
+    description: >
+      Audit 30 products including adversarial cases where marketing claims
+      contradict actual ingredients (e.g. "multigrain" with maida as first
+      ingredient). Requires FSSAI-specific regulatory reasoning.
+    max_steps: 30
+    grader: grade_task3
+    success_criteria:
+      min_risk_accuracy: 0.6
+      adversarial_detection_required: true
+      min_adversarial_catch_rate: 0.5
+
+grading:
+  score_range: [0.0, 1.0]
+  passing_threshold: 0.3
+  metrics:
+    - risk_correctness
+    - ingredient_recall
+    - precision
+    - alternative_validity
+    - adversarial_detection
+    - profile_differentiation
