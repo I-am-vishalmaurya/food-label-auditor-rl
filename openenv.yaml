@@ -1,0 +1,44 @@
+spec_version: 1
+name: food_label_auditor
+version: 0.1.0
+description: >
+  RL environment for auditing Indian food product labels against FSSAI 2020
+  regulations and ICMR-NIN dietary guidelines. The agent reads raw ingredient
+  labels and must classify risk, flag violations, and suggest safer alternatives
+  for different health profiles. Includes 3 difficulty-tiered tasks with
+  deterministic graders and adversarial cases.
+type: space
+runtime: fastapi
+app: server.app:app
+port: 8000
+
+client:
+  class_name: FoodLabelAuditorEnv
+  module: food_label_auditor.client
+
+action:
+  class_name: AuditAction
+  module: food_label_auditor.models
+
+observation:
+  class_name: AuditObservation
+  module: food_label_auditor.models
+
+default_image: food-label-auditor:latest
+
+tags:
+  - openenv
+  - health
+  - food-safety
+  - india
+  - fssai
+  - rl-environment
+
+metadata:
+  domain: health
+  geography: india
+  regulatory_standard: FSSAI-2020
+  research_applications:
+    - LLM safety alignment
+    - personalized health AI evaluation
+    - Global South AI benchmarking

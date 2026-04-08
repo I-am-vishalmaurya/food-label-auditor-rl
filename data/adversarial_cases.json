@@ -1,0 +1,674 @@
+[
+  {
+    "product_id": "ADV_001",
+    "product_name": "MultiGrain Paper Boat Flour",
+    "brand": "Paper Boat",
+    "category": "flour",
+    "ingredients_text": "Refined wheat flour (maida), Ingredients typical for flour: varied formulation #63",
+    "nutrition_per_100g": {
+      "energy_kcal": 335.3,
+      "sugars_g": 2.7,
+      "sodium_mg": 4.8,
+      "fat_g": 2.1
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "B",
+    "nova_group": 1,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_002",
+    "product_name": "MultiGrain Lijjat Papad",
+    "brand": "Lijjat",
+    "category": "papad",
+    "ingredients_text": "Refined wheat flour (maida), Black gram flour (urad dal), edible common salt, black pepper, asafoetida, edible oil (groundnut), papad khar",
+    "nutrition_per_100g": {
+      "energy_kcal": 312,
+      "sugars_g": 1.0,
+      "sodium_mg": 1200,
+      "fat_g": 2.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "C",
+    "nova_group": 3,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_003",
+    "product_name": "MultiGrain Haldiram's Namkeen Snacks",
+    "brand": "Haldiram's",
+    "category": "namkeen_snacks",
+    "ingredients_text": "Refined wheat flour (maida), Gram flour (besan), edible vegetable oil (palmolein oil), potato powder, spices & condiments (red chilli powder, black salt, dry mango powder, coriander), salt, mango powder",
+    "nutrition_per_100g": {
+      "energy_kcal": 526,
+      "sugars_g": 1.8,
+      "sodium_mg": 870,
+      "fat_g": 30.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_004",
+    "product_name": "MultiGrain Britannia Biscuits",
+    "brand": "Britannia",
+    "category": "biscuits",
+    "ingredients_text": "Refined wheat flour (maida), Wheat flour (50%), edible vegetable fat (palm oil), sugar, wheat bran (10%), liquid glucose, invert syrup, raising agents (500(ii), 503(ii)), iodised salt, emulsifier (322(i)), malt extract",
+    "nutrition_per_100g": {
+      "energy_kcal": 460,
+      "sugars_g": 18.0,
+      "sodium_mg": 400,
+      "fat_g": 18.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_005",
+    "product_name": "MultiGrain Britannia Biscuits",
+    "brand": "Britannia",
+    "category": "biscuits",
+    "ingredients_text": "Refined wheat flour (maida), Wheat flour, sugar, edible vegetable oil (palm oil), invert syrup, milk solids, raising agents (503(ii), 500(ii)), iodised salt, emulsifier (322(i))",
+    "nutrition_per_100g": {
+      "energy_kcal": 440,
+      "sugars_g": 20.0,
+      "sodium_mg": 320,
+      "fat_g": 12.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_006",
+    "product_name": "MultiGrain Parle Biscuits",
+    "brand": "Parle",
+    "category": "biscuits",
+    "ingredients_text": "Refined wheat flour (maida), Wheat flour, sugar, edible vegetable oil (palm oil), invert syrup, milk solids, raising agents (503(ii), 500(ii)), salt, emulsifier (322(i)), dough conditioner (223)",
+    "nutrition_per_100g": {
+      "energy_kcal": 462,
+      "sugars_g": 26.3,
+      "sodium_mg": 281,
+      "fat_g": 14.5
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_007",
+    "product_name": "MultiGrain ITC Flour",
+    "brand": "ITC",
+    "category": "flour",
+    "ingredients_text": "Refined wheat flour (maida), Ingredients typical for flour: varied formulation #55",
+    "nutrition_per_100g": {
+      "energy_kcal": 340.8,
+      "sugars_g": 1.3,
+      "sodium_mg": 9.2,
+      "fat_g": 2.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "A",
+    "nova_group": 1,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_008",
+    "product_name": "MultiGrain Nestle Instant Noodles",
+    "brand": "Nestle",
+    "category": "instant_noodles",
+    "ingredients_text": "Refined wheat flour (maida), palm oil, iodised salt, wheat gluten, thickeners (508, 412), mineral (iron), acidity regulators (501(i), 500(ii)), humectant (451(i)), riboflavin, folic acid. Taste maker: mixed spices, sugar, salt, onion powder, flavour enhancer (627, 631), garlic powder, citric acid, turmeric",
+    "nutrition_per_100g": {
+      "energy_kcal": 430,
+      "sugars_g": 2.5,
+      "sodium_mg": 1120,
+      "fat_g": 17.0
+    },
+    "marketing_claims": [
+      "Multigrain",
+      "Wholesome grains"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "A"
+  },
+  {
+    "product_id": "ADV_009",
+    "product_name": "Sugar Free Cadbury Bournvita Health Drink",
+    "brand": "Cadbury",
+    "category": "health_drinks",
+    "ingredients_text": "Sugar, cocoa solids, liquid glucose, malt extract, milk solids, caramel colour (150d), emulsifier (322(i)), vitamins, minerals, raising agent (500(ii)), salt, glucose syrup",
+    "nutrition_per_100g": {
+      "energy_kcal": 377,
+      "sugars_g": 37.4,
+      "sodium_mg": 210,
+      "fat_g": 2.0
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_010",
+    "product_name": "Sugar Free Kissan Breakfast Cereal Product #152",
+    "brand": "Kissan",
+    "category": "breakfast_cereal",
+    "ingredients_text": "Ingredients typical for breakfast cereal: varied formulation #152, maltodextrin",
+    "nutrition_per_100g": {
+      "energy_kcal": 415.8,
+      "sugars_g": 25.7,
+      "sodium_mg": 401.6,
+      "fat_g": 8.0
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "B",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_011",
+    "product_name": "Sugar Free Paper Boat Fruit Juice Product #393",
+    "brand": "Paper Boat",
+    "category": "fruit_juice",
+    "ingredients_text": "Ingredients typical for fruit juice: varied formulation #393, dextrose",
+    "nutrition_per_100g": {
+      "energy_kcal": 53.0,
+      "sugars_g": 15.208216003501345,
+      "sodium_mg": 4.4,
+      "fat_g": 0.2
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "C",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_012",
+    "product_name": "Sugar Free Kellogg's Biscuits Product #46",
+    "brand": "Kellogg's",
+    "category": "biscuits",
+    "ingredients_text": "Ingredients typical for biscuits: varied formulation #46, maltodextrin",
+    "nutrition_per_100g": {
+      "energy_kcal": 497.6,
+      "sugars_g": 25.2,
+      "sodium_mg": 415.5,
+      "fat_g": 21.3
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_013",
+    "product_name": "Sugar Free Marico Fruit Drinks Product #132",
+    "brand": "Marico",
+    "category": "fruit_drinks",
+    "ingredients_text": "Ingredients typical for fruit drinks: varied formulation #132, dextrose",
+    "nutrition_per_100g": {
+      "energy_kcal": 43.0,
+      "sugars_g": 18.720436568707346,
+      "sodium_mg": 6.5,
+      "fat_g": 0.0
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_014",
+    "product_name": "Sugar Free Coca-Cola Health Drinks Product #329",
+    "brand": "Coca-Cola",
+    "category": "health_drinks",
+    "ingredients_text": "Ingredients typical for health drinks: varied formulation #329, maltodextrin",
+    "nutrition_per_100g": {
+      "energy_kcal": 398.1,
+      "sugars_g": 33.3,
+      "sodium_mg": 246.7,
+      "fat_g": 2.5
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "C",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_015",
+    "product_name": "Sugar Free Dabur Real Mango Juice",
+    "brand": "Dabur",
+    "category": "fruit_juice",
+    "ingredients_text": "Water, mango pulp (25%), sugar, citric acid, mango flavour, preservative (211), antioxidant (300), maltodextrin",
+    "nutrition_per_100g": {
+      "energy_kcal": 60,
+      "sugars_g": 14.0,
+      "sodium_mg": 15,
+      "fat_g": 0.0
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "C",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_016",
+    "product_name": "Sugar Free Kellogg's Chocos",
+    "brand": "Kellogg's",
+    "category": "breakfast_cereal",
+    "ingredients_text": "Cereals (wheat flour, rice flour), sugar, cocoa solids (5%), edible vegetable oil (palm), malt extract, salt, minerals (iron, zinc), vitamins (niacin, B6, riboflavin, thiamin, folic acid, B12), emulsifier (322(i)), antioxidant (320), corn syrup solids",
+    "nutrition_per_100g": {
+      "energy_kcal": 394,
+      "sugars_g": 30.0,
+      "sodium_mg": 350,
+      "fat_g": 5.0
+    },
+    "marketing_claims": [
+      "No added sugar",
+      "Sugar free"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "B"
+  },
+  {
+    "product_id": "ADV_017",
+    "product_name": "Low Salt MTR Chips Product #141",
+    "brand": "MTR",
+    "category": "chips",
+    "ingredients_text": "Ingredients typical for chips: varied formulation #141",
+    "nutrition_per_100g": {
+      "energy_kcal": 521.5,
+      "sugars_g": 2.6,
+      "sodium_mg": 1382.8524560404194,
+      "fat_g": 30.5
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_018",
+    "product_name": "Low Salt Conagra Instant Noodles Product #155",
+    "brand": "Conagra",
+    "category": "instant_noodles",
+    "ingredients_text": "Ingredients typical for instant noodles: varied formulation #155",
+    "nutrition_per_100g": {
+      "energy_kcal": 450.9,
+      "sugars_g": 1.8,
+      "sodium_mg": 970.5237216409188,
+      "fat_g": 15.5
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "C",
+    "nova_group": 3,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_019",
+    "product_name": "Low Salt Parle Spice Mix Product #377",
+    "brand": "Parle",
+    "category": "spice_mix",
+    "ingredients_text": "Ingredients typical for spice mix: varied formulation #377",
+    "nutrition_per_100g": {
+      "energy_kcal": 257.1,
+      "sugars_g": 6.3,
+      "sodium_mg": 2805.8,
+      "fat_g": 10.5
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "A",
+    "nova_group": 1,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_020",
+    "product_name": "Low Salt Yakult Dairy Butter Product #300",
+    "brand": "Yakult",
+    "category": "dairy_butter",
+    "ingredients_text": "Ingredients typical for dairy butter: varied formulation #300",
+    "nutrition_per_100g": {
+      "energy_kcal": 738.1,
+      "sugars_g": 0.1,
+      "sodium_mg": 1271.436574592739,
+      "fat_g": 75.8
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "C",
+    "nova_group": 2,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_021",
+    "product_name": "Low Salt Haldiram's Spice Mix Product #214",
+    "brand": "Haldiram's",
+    "category": "spice_mix",
+    "ingredients_text": "Ingredients typical for spice mix: varied formulation #214",
+    "nutrition_per_100g": {
+      "energy_kcal": 250.1,
+      "sugars_g": 2.7,
+      "sodium_mg": 3184.5,
+      "fat_g": 5.0
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "C",
+    "nova_group": 1,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_022",
+    "product_name": "Low Salt Tata Salt",
+    "brand": "Tata",
+    "category": "condiments",
+    "ingredients_text": "Iodised salt, potassium iodate",
+    "nutrition_per_100g": {
+      "energy_kcal": 0,
+      "sugars_g": 0.0,
+      "sodium_mg": 38758,
+      "fat_g": 0.0
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "E",
+    "nova_group": 2,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_023",
+    "product_name": "Low Salt Mother Dairy Dairy Butter Product #276",
+    "brand": "Mother Dairy",
+    "category": "dairy_butter",
+    "ingredients_text": "Ingredients typical for dairy butter: varied formulation #276",
+    "nutrition_per_100g": {
+      "energy_kcal": 748.8,
+      "sugars_g": 0.8,
+      "sodium_mg": 1065.5394957605836,
+      "fat_g": 77.5
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "C",
+    "nova_group": 2,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_024",
+    "product_name": "Low Salt Kellogg's Instant Noodles Product #17",
+    "brand": "Kellogg's",
+    "category": "instant_noodles",
+    "ingredients_text": "Ingredients typical for instant noodles: varied formulation #17",
+    "nutrition_per_100g": {
+      "energy_kcal": 405.1,
+      "sugars_g": 3.3,
+      "sodium_mg": 1107.8,
+      "fat_g": 19.6
+    },
+    "marketing_claims": [
+      "Low salt",
+      "Reduced sodium"
+    ],
+    "nutri_score": "D",
+    "nova_group": 3,
+    "is_adversarial": true,
+    "adversarial_type": "C"
+  },
+  {
+    "product_id": "ADV_025",
+    "product_name": "All Natural Amul Carbonated Drinks Product #105",
+    "brand": "Amul",
+    "category": "carbonated_drinks",
+    "ingredients_text": "Ingredients typical for carbonated drinks: varied formulation #105",
+    "nutrition_per_100g": {
+      "energy_kcal": 39.7,
+      "sugars_g": 11.7,
+      "sodium_mg": 9.4,
+      "fat_g": 0.0
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_026",
+    "product_name": "All Natural Yakult Probiotic Drink",
+    "brand": "Yakult",
+    "category": "probiotic_drinks",
+    "ingredients_text": "Water, skimmed milk powder, glucose fructose syrup, sugar, flavour, Lactobacillus casei strain Shirota",
+    "nutrition_per_100g": {
+      "energy_kcal": 66,
+      "sugars_g": 14.2,
+      "sodium_mg": 18,
+      "fat_g": 0.0
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "C",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_027",
+    "product_name": "All Natural Saffola Chips Product #123",
+    "brand": "Saffola",
+    "category": "chips",
+    "ingredients_text": "Ingredients typical for chips: varied formulation #123",
+    "nutrition_per_100g": {
+      "energy_kcal": 548.0,
+      "sugars_g": 1.1,
+      "sodium_mg": 551.4,
+      "fat_g": 30.7
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "E",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_028",
+    "product_name": "All Natural Kissan Breakfast Cereal Product #152",
+    "brand": "Kissan",
+    "category": "breakfast_cereal",
+    "ingredients_text": "Ingredients typical for breakfast cereal: varied formulation #152",
+    "nutrition_per_100g": {
+      "energy_kcal": 415.8,
+      "sugars_g": 25.7,
+      "sodium_mg": 401.6,
+      "fat_g": 8.0
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "B",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_029",
+    "product_name": "All Natural Paper Boat Chips Product #97",
+    "brand": "Paper Boat",
+    "category": "chips",
+    "ingredients_text": "Ingredients typical for chips: varied formulation #97",
+    "nutrition_per_100g": {
+      "energy_kcal": 532.1,
+      "sugars_g": 1.3,
+      "sodium_mg": 888.7,
+      "fat_g": 34.0
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_030",
+    "product_name": "All Natural Parle-G Gold Biscuits",
+    "brand": "Parle",
+    "category": "biscuits",
+    "ingredients_text": "Wheat flour, sugar, edible vegetable oil (palm oil), invert syrup, milk solids, raising agents (503(ii), 500(ii)), salt, emulsifier (322(i)), dough conditioner (223)",
+    "nutrition_per_100g": {
+      "energy_kcal": 462,
+      "sugars_g": 26.3,
+      "sodium_mg": 281,
+      "fat_g": 14.5
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_031",
+    "product_name": "All Natural Tata Popcorn Product #43",
+    "brand": "Tata",
+    "category": "popcorn",
+    "ingredients_text": "Ingredients typical for popcorn: varied formulation #43",
+    "nutrition_per_100g": {
+      "energy_kcal": 455.3,
+      "sugars_g": 0.4,
+      "sodium_mg": 607.0,
+      "fat_g": 22.2
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  },
+  {
+    "product_id": "ADV_032",
+    "product_name": "All Natural Yakult Breakfast Cereal Product #167",
+    "brand": "Yakult",
+    "category": "breakfast_cereal",
+    "ingredients_text": "Ingredients typical for breakfast cereal: varied formulation #167",
+    "nutrition_per_100g": {
+      "energy_kcal": 399.1,
+      "sugars_g": 32.5,
+      "sodium_mg": 300.5,
+      "fat_g": 9.6
+    },
+    "marketing_claims": [
+      "100% natural",
+      "Organic ingredients"
+    ],
+    "nutri_score": "D",
+    "nova_group": 4,
+    "is_adversarial": true,
+    "adversarial_type": "D"
+  }
+]
