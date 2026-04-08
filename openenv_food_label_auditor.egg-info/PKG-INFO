@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: openenv-food_label_auditor
+Version: 0.1.0
+Summary: Food Label Auditor environment for OpenEnv — audits Indian food labels against FSSAI/ICMR standards
+Requires-Python: >=3.10
+Requires-Dist: openenv-core[core]>=0.2.1
+Requires-Dist: pydantic>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
