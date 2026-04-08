@@ -41,14 +41,18 @@ API_KEY = os.getenv("HF_TOKEN") or os.getenv("API_KEY")
 
 API_BASE_URL = os.getenv("API_BASE_URL", "https://router.huggingface.co/v1")
 MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
-TASK_ID = int(os.getenv("TASK_ID", "1"))
 SEED = int(os.getenv("SEED", "42"))
-TASK_NAME = os.getenv("FOOD_LABEL_AUDITOR_TASK", f"food_audit_task{TASK_ID}")
 BENCHMARK = os.getenv("FOOD_LABEL_AUDITOR_BENCHMARK", "food_label_auditor")
 MAX_STEPS = int(os.getenv("MAX_STEPS", "35"))
 TEMPERATURE = 0.3
 MAX_TOKENS = 300
 LLM_TIMEOUT = 30
+
+ALL_TASKS = [
+    {"task_id": 1, "task_name": "food_audit_task1"},
+    {"task_id": 2, "task_name": "food_audit_task2"},
+    {"task_id": 3, "task_name": "food_audit_task3"},
+]
 
 SYSTEM_PROMPT = textwrap.dedent(
     """
@@ -213,30 +217,27 @@ def get_model_action(client: OpenAI, obs) -> AuditAction:
         )
 
 
-async def main() -> None:
-    client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
-
-    # Use longer timeouts to handle slow LLM API calls
-    env = await FoodLabelAuditorEnv.from_docker_image(
-        IMAGE_NAME,
-        connect_timeout_s=30.0,
-        message_timeout_s=120.0,  # 2 minutes per message to handle slow LLM
-    )
-
+async def run_task(
+    env: FoodLabelAuditorEnv,
+    client: OpenAI,
+    task_id: int,
+    task_name: str,
+) -> None:
+    """Run a single task end-to-end, emitting [START]/[STEP]/[END] logs."""
     rewards: List[float] = []
     steps_taken = 0
     score = 0.0
     success = False
     max_possible_score = 0.0
 
-    log_start(task=TASK_NAME, env=BENCHMARK, model=MODEL_NAME)
+    log_start(task=task_name, env=BENCHMARK, model=MODEL_NAME)
 
     try:
-        result = await env.reset(seed=SEED, task_id=TASK_ID)
+        result = await env.reset(seed=SEED, task_id=task_id)
         obs = result.observation
         total_steps = obs.total_steps
         max_possible_score = total_steps * 1.0
-        print(f"[DEBUG] Task {TASK_ID}: {total_steps} products to audit", flush=True)
+        print(f"[DEBUG] Task {task_id}: {total_steps} products to audit", flush=True)
 
         for step in range(1, MAX_STEPS + 1):
             if result.done:
@@ -266,14 +267,34 @@ async def main() -> None:
         success = score >= 0.3
 
     except Exception as e:
-        print(f"[DEBUG] Episode error: {e}", flush=True)
+        print(f"[DEBUG] Task {task_id} episode error: {e}", flush=True)
 
+    finally:
+        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
+
+
+async def main() -> None:
+    client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
+
+    env = await FoodLabelAuditorEnv.from_docker_image(
+        IMAGE_NAME,
+        connect_timeout_s=30.0,
+        message_timeout_s=120.0,
+    )
+
+    try:
+        for task_cfg in ALL_TASKS:
+            await run_task(
+                env=env,
+                client=client,
+                task_id=task_cfg["task_id"],
+                task_name=task_cfg["task_name"],
+            )
     finally:
         try:
             await env.close()
         except Exception as e:
             print(f"[DEBUG] env.close() error: {e}", flush=True)
-        log_end(success=success, steps=steps_taken, score=score, rewards=rewards)
 
 
 if __name__ == "__main__":
