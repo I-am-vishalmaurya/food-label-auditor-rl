@@ -65,19 +65,11 @@ COPY --from=builder /app/env/.venv /app/.venv
 # Copy the environment code (includes data/ directory)
 COPY --from=builder /app/env /app/env
 
-# Set PATH to use the virtual environment
 ENV PATH="/app/.venv/bin:$PATH"
 
-# Set PYTHONPATH so imports work correctly
 ENV PYTHONPATH="/app/env:$PYTHONPATH"
 
-# Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
-# Run the FastAPI server
-<<<<<<< HEAD
-=======
-ENV ENABLE_WEB_INTERFACE=true
->>>>>>> 84c7619583124ff374af731a314f4106335a84f9
 CMD ["sh", "-c", "cd /app/env && uvicorn server.app:app --host 0.0.0.0 --port 8000"]
